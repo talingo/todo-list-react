@@ -1,9 +1,17 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function ToDoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
+
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -44,6 +52,7 @@ function ToDoForm(props) {
             name="text"
             onChange={handleChange}
             className="toDo-input"
+            ref={inputRef}
           />
           <button className="toDo-button">Add something to do</button>
         </>

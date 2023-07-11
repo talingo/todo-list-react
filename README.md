@@ -5,4 +5,4 @@ Simple to do list in react with vite
 ![](https://github.com/talingo/todo-list-react/blob/main/src/assets/screenshot.png)
 
 
-![Deploy](https://talingo.github.io/todo-list-react/)
+[Deploy](https://talingo.github.io/todo-list-react/)
